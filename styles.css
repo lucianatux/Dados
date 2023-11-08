@@ -1,9 +1,12 @@
 body {
     text-align: center;
     font-family: Arial, sans-serif;
-    color: #000;
+    color: #ddd;
+    background-image: url("./assets/text3.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
-  
+  /*
   .dice {
     width: 100px;
     height: 100px;
@@ -14,15 +17,22 @@ body {
     align-items: center;
     font-size: 36px;
     margin: 0 auto;
-  }
-  
-  .side {
-    display: none;
-  }
-  
+  }*/
   button {
     margin: 20px;
     padding: 10px 20px;
     font-size: 16px;
   }
-  
+  h1 {
+    font-size: 24px;
+  }
+  .diceImg{
+    margin: 20px;
+    width: 180px;
+  }
+  @media (max-width: 768px) {
+    .diceImg{
+        margin: 10px;
+        width: 100px;
+    }
+  }

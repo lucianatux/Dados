@@ -22,14 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    const specialDiceButton = document.getElementById("specialDiceButton");
-  const specialDiceImage = document.getElementById("specialDiceImage");
+
   const multiSpecialDiceButton = document.getElementById("multiSpecialDiceButton");
   const multiSpecialDiceResult = document.getElementById("multiSpecialDiceResult");
 
-  specialDiceButton.addEventListener("click", function () {
-    rollSpecialDice();
-  });
 
   multiSpecialDiceButton.addEventListener("click", function () {
     const numberOfSpecialDice = parseInt(numberOfDiceInput.value, 10);
@@ -49,16 +45,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     switch (specialRandomNumber) {
       case 1:
-        specialImageName = "dicemonster.jpg";
+        specialImageName = `assets/dicemonster.jpg`;
         break;
       case 2:
       case 3:
-        specialImageName = "dicelion.jpg";
+        specialImageName = `assets/dicelion.jpg`;
         break;
       case 4:
       case 5:
       case 6:
-        specialImageName = "diceskull.jpg";
+        specialImageName = `assets/diceskull.jpg`;
         break;
       default:
         break;
@@ -67,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const specialDiceImageElement = document.createElement("img");
     specialDiceImageElement.src = specialImageName;
     specialDiceImageElement.alt = "Dado Especial";
+    specialDiceImageElement.className = "heroquest";
     multiSpecialDiceResult.appendChild(specialDiceImageElement);
   }
   

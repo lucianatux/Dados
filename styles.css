@@ -22,16 +22,36 @@ body {
     margin: 20px;
     padding: 10px 20px;
     font-size: 16px;
+    background: transparent;
+    color: #fff;
+    border-radius: 10px;
+  }
+  button:hover{
+    box-shadow: 0 0 10px #fff;
   }
   h1 {
     font-size: 24px;
   }
-  .diceImg{
+  input{
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 14px;
+    margin: 20px;
+  }
+  .diceImg {
     margin: 20px;
     width: 180px;
   }
+  .heroquest{
+margin: 20px;
+width: 180px;
+border: 2px solid #fff;
+border-radius: 20px;
+  }
   @media (max-width: 768px) {
-    .diceImg{
+    .diceImg, .heroquest{
         margin: 10px;
         width: 100px;
     }

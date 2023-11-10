@@ -66,6 +66,27 @@ document.addEventListener("DOMContentLoaded", function () {
     specialDiceImageElement.className = "heroquest";
     multiSpecialDiceResult.appendChild(specialDiceImageElement);
   }
+
+  var dungeonDiceButton = document.getElementById('dungeonDiceButton');
+var numberOfFacesInput = document.getElementById('numberOfFaces');
+var dungeonDiceResult = document.getElementById('dungeonDiceResult');
+
+  document.getElementById('dungeonDiceButton').addEventListener('click', function() {
+    // Obtén la cantidad de caras del dado
+    var numberOfFaces = document.getElementById('numberOfFaces').value;
+  
+    // Verifica que la entrada sea un número válido
+    if (!isNaN(numberOfFaces) && numberOfFaces >= 1 && numberOfFaces <= 100) {
+      // Genera un número aleatorio entre 1 y la cantidad de caras
+      var randomNumber = Math.floor(Math.random() * numberOfFaces) + 1;
+  
+      // Muestra el resultado en el elemento con id 'dungeonDiceResult'
+      document.getElementById('dungeonDiceResult').innerText = 'Resultado: ' + randomNumber;
+    } else {
+      alert('Por favor, ingresa una cantidad válida de caras para el dado.');
+    }
+  });
+
   
     function getRandomNumber(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;

@@ -1,71 +1,92 @@
 body {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    color: #ddd;
-    background-image: url("./assets/floor1.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-  }
- p{
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #ddd;
+  background-image: url("./assets/floor1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+p {
   margin: 25px 5px 5px 5px;
- }
-  button {
-    margin: 5px 5px 25px 5px;
-    padding: 10px;
-    font-size: 16px;
-    background: transparent;
-    color: #fff;
-    border-radius: 10px;
-  }
-  button:hover{
-    box-shadow: 0 0 10px #fff;
-  }
-  h1 {
-    font-size: 24px;
-  }
-  hr{
-    border: none;
-    height: 2px;
-    background-color: grey;
-  }
-  input{
-    width: 150px;
-    height: 50px;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 14px;
-    margin: 10px;
-  }
-  .diceImg {
-    margin: 20px;
-    width: 160px;
-  }
-  .heroquest{
-margin: 20px;
-width: 160px;
-border: 2px solid #fff;
-border-radius: 20px;
-  }
-  .dode{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .dodedice{
-    background-image: url('./assets/dode3.png');
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-    font-size: 30px;
-    text-align: center;
-    display: flex;
+}
+button {
+  margin: 5px 5px 25px 5px;
+  padding: 10px;
+  font-size: 16px;
+  background: transparent;
+  color: #fff;
+  border-radius: 10px;
+}
+button:hover {
+  box-shadow: 0 0 10px #fff;
+}
+h1 {
+  font-size: 24px;
+}
+hr {
+  border: none;
+  height: 2px;
+  background-color: grey;
+}
+input {
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 14px;
+  margin: 10px;
+}
+.diceImg {
+  margin: 20px;
+  width: 160px;
+}
+.heroquest {
+  margin: 20px;
+  width: 160px;
+  border-radius: 20px;
+}
+.dode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dodedice {
+  background-image: url("./assets/dode3.png");
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  font-size: 30px;
+  text-align: center;
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Ajusta la velocidad y la rotación de la animación shake */
+@keyframes shake {
+  0%, 100% {
+    transform: rotate(0deg) translateX(0);
   }
-  @media (max-width: 768px) {
-    .diceImg, .heroquest{
-        margin: 10px;
-        width: 100px;
-    }
+  25%, 75% {
+    transform: rotate(360deg) translateX(-10px);
   }
+  50% {
+    transform: rotate(0deg) translateX(10px);
+  }
+}
+
+
+/* animación a la clase shake */
+.shake {
+  animation: shake 2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .diceImg,
+  .heroquest, .dodedice {
+    margin: 10px;
+    width: 100px;
+  }
+}
+

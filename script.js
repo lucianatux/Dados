@@ -14,12 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
           const diceImage = document.createElement("img");
           diceImage.src = imageName;
           diceImage.alt = "Dado";
-          diceImage.classList = "diceImg";
+          diceImage.classList = "diceImg shake";
           multiDiceResult.appendChild(diceImage);
         }
       } else {
         multiDiceResult.innerHTML = "Por favor, ingresa una cantidad válida de dados (1-6).";
       }
+       // Elimina la clase shake después de 3 segundos
+    setTimeout(() => {
+      document.querySelectorAll('.shake').forEach(el => el.classList.remove('shake'));
+    }, 2000);
     });
 
 
@@ -34,6 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
       for (let i = 0; i < numberOfSpecialDice; i++) {
         rollSpecialDice();
       }
+        // Agrega la clase shake a los elementos generados
+    multiSpecialDiceResult.querySelectorAll('img').forEach(el => el.classList.add('shake'));
+
+    // Elimina la clase shake después de 3 segundos
+    setTimeout(() => {
+      multiSpecialDiceResult.querySelectorAll('.shake').forEach(el => el.classList.remove('shake'));
+    }, 2000);
     } else {
       multiSpecialDiceResult.innerHTML = "Por favor, ingresa una cantidad válida de dados especiales (1-6).";
     }
@@ -45,16 +56,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     switch (specialRandomNumber) {
       case 1:
-        specialImageName = `assets/dicemonster.jpg`;
+        specialImageName = `assets/monsterdice.png`;
         break;
       case 2:
       case 3:
-        specialImageName = `assets/dicelion.jpg`;
+        specialImageName = `assets/liondice.png`;
         break;
       case 4:
       case 5:
       case 6:
-        specialImageName = `assets/diceskull.jpg`;
+        specialImageName = `assets/skulldice.png`;
         break;
       default:
         break;
@@ -67,9 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
     multiSpecialDiceResult.appendChild(specialDiceImageElement);
   }
 
-  var dungeonDiceButton = document.getElementById('dungeonDiceButton');
-var numberOfFacesInput = document.getElementById('numberOfFaces');
-var dungeonDiceResult = document.getElementById('dungeonDiceResult');
+const dungeonDiceButton = document.getElementById('dungeonDiceButton');
+const numberOfFacesInput = document.getElementById('numberOfFaces');
+const dungeonDiceResult = document.getElementById('dungeonDiceResult');
 
   document.getElementById('dungeonDiceButton').addEventListener('click', function() {
     // Obtén la cantidad de caras del dado
@@ -81,6 +92,11 @@ var dungeonDiceResult = document.getElementById('dungeonDiceResult');
       var randomNumber = Math.floor(Math.random() * numberOfFaces) + 1;
   
       // Muestra el resultado en el elemento con id 'dungeonDiceResult'
+      dungeonDiceResult.classList.add('shake');
+       // Elimina la clase shake después de 3 segundos
+     setTimeout(() => {
+      dungeonDiceResult.classList.remove('shake');
+    }, 2000);
       document.getElementById('dungeonDiceResult').innerText =  randomNumber;
     } else {
       alert('Por favor, ingresa una cantidad válida de caras para el dado.');

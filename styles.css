@@ -7,20 +7,11 @@ body {
     background-size: cover;
     height: 100%;
   }
-  /*
-  .dice {
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    border: 1px solid #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 36px;
-    margin: 0 auto;
-  }*/
+ p{
+  margin: 25px 5px 5px 5px;
+ }
   button {
-    margin: 10px;
+    margin: 5px 5px 25px 5px;
     padding: 10px;
     font-size: 16px;
     background: transparent;
@@ -33,13 +24,18 @@ body {
   h1 {
     font-size: 24px;
   }
+  hr{
+    border: none;
+    height: 2px;
+    background-color: grey;
+  }
   input{
     width: 150px;
     height: 50px;
     border-radius: 20px;
     text-align: center;
     font-size: 14px;
-    margin: 20px;
+    margin: 10px;
   }
   .diceImg {
     margin: 20px;
@@ -50,6 +46,22 @@ margin: 20px;
 width: 160px;
 border: 2px solid #fff;
 border-radius: 20px;
+  }
+  .dode{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dodedice{
+    background-image: url('./assets/dode3.png');
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+  justify-content: center;
+  align-items: center;
   }
   @media (max-width: 768px) {
     .diceImg, .heroquest{

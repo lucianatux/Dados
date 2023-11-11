@@ -8,32 +8,29 @@
     <link rel="shortcut icon" href="dice.png" type="image/x-icon" />
   </head>
   <body>
-    <h1></h1>
-    <input
-      type="number"
-      class="quantity"
-      id="numberOfDice"
-      min="1"
-      max="6"
-      placeholder="Cantidad de Dados"
-    />
-    <br/>
-    <button id="multiRollButton">Classic Dices</button>
-    <div id="multiDiceResult"></div>
-    <button id="multiSpecialDiceButton">
-      Hero Quest Dices
-    </button>
-    <div id="multiSpecialDiceResult"></div>
-    <button id="dungeonDiceButton">Dungeon Dices</button>
-    <input
-    type="number"
-    class="quantity"
-    id="numberOfFaces"
-    min="1"
-    max="100"
-    placeholder="Cantidad de Caras"
-  />
-    <div id="dungeonDiceResult"></div>
+    <h1>La suerte está echada</h1>
+    <hr>
+    <div>
+      <input type="number"class="quantity"id="numberOfDice"min="1"max="6"
+      placeholder="Cantidad de Dados"/>
+      <br />
+      <p>Dados de 6 caras con números del 1 al 6</p>
+      <button id="multiRollButton">Classic Dices</button>
+      <div id="multiDiceResult"></div>
+      <p>Dados de 6 caras Hero Quest para ataque y defensa</p>
+      <button id="multiSpecialDiceButton">Hero Quest Dices</button>
+      <div id="multiSpecialDiceResult"></div>
+    </div>
+
+    <div>
+      <p>Dado especial con cantidad de caras a elección</p>
+      <button id="dungeonDiceButton">Dungeon Dices</button>
+      <input type="number"class="quantity"id="numberOfFaces"min="1"max="100"
+        placeholder="Cantidad de Caras"/>
+      <div class="dode">
+        <div id="dungeonDiceResult" class="dodedice"></div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>

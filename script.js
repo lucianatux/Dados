@@ -81,7 +81,7 @@ var dungeonDiceResult = document.getElementById('dungeonDiceResult');
       var randomNumber = Math.floor(Math.random() * numberOfFaces) + 1;
   
       // Muestra el resultado en el elemento con id 'dungeonDiceResult'
-      document.getElementById('dungeonDiceResult').innerText = 'Resultado: ' + randomNumber;
+      document.getElementById('dungeonDiceResult').innerText =  randomNumber;
     } else {
       alert('Por favor, ingresa una cantidad válida de caras para el dado.');
     }

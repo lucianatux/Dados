@@ -79,10 +79,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 const dungeonDiceButton = document.getElementById('dungeonDiceButton');
-const numberOfFacesInput = document.getElementById('numberOfFaces');
 const dungeonDiceResult = document.getElementById('dungeonDiceResult');
 
-  document.getElementById('dungeonDiceButton').addEventListener('click', function() {
+  dungeonDiceButton.addEventListener('click', function() {
     // Obtén la cantidad de caras del dado
     var numberOfFaces = document.getElementById('numberOfFaces').value;
   
@@ -97,7 +96,9 @@ const dungeonDiceResult = document.getElementById('dungeonDiceResult');
      setTimeout(() => {
       dungeonDiceResult.classList.remove('shake');
     }, 2000);
+    setTimeout(() => {
       document.getElementById('dungeonDiceResult').innerText =  randomNumber;
+    }, 2000)
     } else {
       alert('Por favor, ingresa una cantidad válida de caras para el dado.');
     }

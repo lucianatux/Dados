@@ -54,6 +54,7 @@ input {
 .dodedice {
   background-image: url("./assets/dode3.png");
   background-repeat: no-repeat;
+  background-size: contain;
   width: 200px;
   height: 200px;
   font-size: 30px;
@@ -84,9 +85,12 @@ input {
 
 @media (max-width: 768px) {
   .diceImg,
-  .heroquest, .dodedice {
+  .heroquest {
     margin: 10px;
     width: 100px;
+  }
+  .dodedice{
+    width: 200px;
   }
 }
 

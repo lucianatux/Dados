@@ -3,10 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const multiRollButton = document.getElementById("multiRollButton");
     const numberOfDiceInput = document.getElementById("numberOfDice");
     const multiDiceResult = document.getElementById("multiDiceResult");
-  
     multiRollButton.addEventListener("click", function () {
       const numberOfDice = parseInt(numberOfDiceInput.value, 10);
-      if (numberOfDice > 0 && numberOfDice <= 6) {
+      if (numberOfDice > 0 && numberOfDice <= 8) {
         multiDiceResult.innerHTML = ""; // Limpia los resultados anteriores
         for (let i = 0; i < numberOfDice; i++) {
           const randomNumber = getRandomNumber(1, 6);
@@ -26,14 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 2000);
     });
 
-
   const multiSpecialDiceButton = document.getElementById("multiSpecialDiceButton");
   const multiSpecialDiceResult = document.getElementById("multiSpecialDiceResult");
-
-
   multiSpecialDiceButton.addEventListener("click", function () {
     const numberOfSpecialDice = parseInt(numberOfDiceInput.value, 10);
-    if (numberOfSpecialDice > 0 && numberOfSpecialDice <= 6) {
+    if (numberOfSpecialDice > 0 && numberOfSpecialDice <= 8) {
       multiSpecialDiceResult.innerHTML = ""; // Limpia los resultados anteriores
       for (let i = 0; i < numberOfSpecialDice; i++) {
         rollSpecialDice();
@@ -80,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const dungeonDiceButton = document.getElementById('dungeonDiceButton');
 const dungeonDiceResult = document.getElementById('dungeonDiceResult');
-
   dungeonDiceButton.addEventListener('click', function() {
     // Obtén la cantidad de caras del dado
     var numberOfFaces = document.getElementById('numberOfFaces').value;

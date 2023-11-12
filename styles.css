@@ -17,6 +17,7 @@ button {
   background: transparent;
   color: #fff;
   border-radius: 10px;
+  cursor: pointer;
 }
 button:hover {
   box-shadow: 0 0 10px #fff;
@@ -34,8 +35,14 @@ input {
   height: 50px;
   border-radius: 20px;
   text-align: center;
-  font-size: 14px;
+  font-size: 22px;
   margin: 10px;
+}
+.sixFaces{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .diceImg {
   margin: 20px;

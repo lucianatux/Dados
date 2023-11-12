@@ -9,24 +9,31 @@
   </head>
   <body>
     <h1>La suerte está echada</h1>
-    <hr>
-    <div>
-      <input type="number"class="quantity"id="numberOfDice"min="1"max="6"
-      placeholder="Cantidad de Dados"/>
-      <br />
-      <p>Dados de 6 caras con números del 1 al 6</p>
-      <button id="multiRollButton">Classic Dices</button>
-      <div id="multiDiceResult"></div>
-      <p>Dados de 6 caras Hero Quest para ataque y defensa</p>
-      <button id="multiSpecialDiceButton">Hero Quest Dices</button>
-      <div id="multiSpecialDiceResult"></div>
-    </div>
+    <hr />
+    <input
+      type="number"
+      class="quantity"
+      id="numberOfDice"
+      min="1"
+      max="8"
+      placeholder="N°deDados"
+    />
+    <br />
+        <button id="multiRollButton" title="Dados de 6 caras con números del 1 al 6">Classic Dices</button>
+        <div id="multiDiceResult"></div>
+        <button id="multiSpecialDiceButton" title="Dados de 6 caras Hero Quest para ataque y defensa">Hero Quest Dices</button>
+        <div id="multiSpecialDiceResult"></div>
 
     <div>
-      <p>Dado especial con cantidad de caras a elección</p>
-      <button id="dungeonDiceButton">Dungeon Dices</button>
-      <input type="number"class="quantity"id="numberOfFaces"min="1"max="100"
-        placeholder="Cantidad de Caras"/>
+      <button id="dungeonDiceButton" title="Dado especial con cantidad de caras a elección">Dungeon Dices</button>
+      <input
+        type="number"
+        class="quantity"
+        id="numberOfFaces"
+        min="1"
+        max="100"
+        placeholder="N°deCaras"
+      />
       <div class="dode">
         <div id="dungeonDiceResult" class="dodedice"></div>
       </div>

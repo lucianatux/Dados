@@ -8,24 +8,48 @@
     <link rel="shortcut icon" href="dice.png" type="image/x-icon" />
   </head>
   <body>
-    <h1>La suerte está echada</h1>
-    <hr />
-    <input
-      type="number"
-      class="quantity"
-      id="numberOfDice"
-      min="1"
-      max="8"
-      placeholder="N°deDados"
-    />
-    <br />
-        <button id="multiRollButton" title="Dados de 6 caras con números del 1 al 6">Classic Dices</button>
-        <div id="multiDiceResult"></div>
-        <button id="multiSpecialDiceButton" title="Dados de 6 caras Hero Quest para ataque y defensa">Hero Quest Dices</button>
-        <div id="multiSpecialDiceResult"></div>
-
-    <div>
-      <button id="dungeonDiceButton" title="Dado especial con cantidad de caras a elección">Dungeon Dices</button>
+    <div class="menu">
+      <h1>La suerte está echada...</h1>
+      <a href="#classicDiv" class="menuLink">Classic</a>
+      <a href="#heroQuestDiv" class="menuLink">HeroQuest</a>
+      <a href="#dungeonDiceDiv" class="menuLink">DungeonDice</a>
+    </div>
+    <div id="classicDiv">
+      <div class="space"></div>
+      <input
+        type="number"
+        class="quantity"
+        id="numberOfDice"
+        min="1"
+        max="8"
+        placeholder="N°deDados"
+      />
+      <br />
+      <button
+        id="multiRollButton"
+        title="Dados de 6 caras con números del 1 al 6"
+      >
+        Classic Dices
+      </button>
+      <div id="multiDiceResult"></div>
+    </div>
+    <div id="heroQuestDiv">
+      <div class="space"></div>
+      <button
+        id="multiSpecialDiceButton"
+        title="Dados de 6 caras Hero Quest para ataque y defensa"
+      >
+        Hero Quest Dices
+      </button>
+      <div id="multiSpecialDiceResult"></div>
+    </div>
+    <div id="dungeonDiceDiv">
+      <button
+        id="dungeonDiceButton"
+        title="Dado especial con cantidad de caras a elección"
+      >
+        Dungeon Dices
+      </button>
       <input
         type="number"
         class="quantity"

@@ -7,9 +7,6 @@ body {
   background-size: cover;
   height: 100%;
 }
-p {
-  margin: 25px 5px 5px 5px;
-}
 button {
   margin: 5px 5px 25px 5px;
   padding: 10px;
@@ -23,12 +20,9 @@ button:hover {
   box-shadow: 0 0 10px #fff;
 }
 h1 {
-  font-size: 24px;
-}
-hr {
-  border: none;
-  height: 2px;
-  background-color: grey;
+  font-size: 16px;
+  color: gray;
+  margin-right: 50px;
 }
 input {
   width: 150px;
@@ -38,11 +32,20 @@ input {
   font-size: 22px;
   margin: 10px;
 }
-.sixFaces{
+.menu{
+  position: fixed;
+  top: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  background-color: #000000cb;
+  width: 100vw;
+  margin: 0;
+}
+.menuLink{
+  color: #fff;
+  text-decoration: none;
+  margin: auto 10px;
 }
 .diceImg {
   margin: 20px;
@@ -69,6 +72,12 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#classicDiv, #heroQuestDiv, #dungeonDiceDiv{
+  margin-top: 50px;
+}
+.space{
+  height: 40px;
 }
 
 /* Ajusta la velocidad y la rotación de la animación shake */
@@ -98,6 +107,12 @@ input {
   }
   .dodedice{
     width: 200px;
+  }
+  .space{
+    height: 80px;
+  }
+  h1{
+    display: none;
   }
 }
 

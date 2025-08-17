@@ -81,7 +81,7 @@ const dungeonDiceResult = document.getElementById('dungeonDiceResult');
     var numberOfFaces = document.getElementById('numberOfFaces').value;
   
     // Verifica que la entrada sea un número válido
-    if (!isNaN(numberOfFaces) && numberOfFaces >= 1 && numberOfFaces <= 100) {
+    if (!isNaN(numberOfFaces) && numberOfFaces >= 1 && numberOfFaces <= 999) {
       // Genera un número aleatorio entre 1 y la cantidad de caras
       var randomNumber = Math.floor(Math.random() * numberOfFaces) + 1;
   
